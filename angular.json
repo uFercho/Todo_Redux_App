@@ -27,6 +27,7 @@
             "outputPath": "dist/todo-app",
             "index": "src/index.html",
             "browser": "src/main.ts",
+            "baseHref": "./",
             "polyfills": [
               "zone.js"
             ],

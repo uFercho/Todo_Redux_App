@@ -6,7 +6,10 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "build:github": "npm run delete:docs && ng build && npm run copy:dist",
+    "delete:docs": "del docs",
+    "copy:dist": "copyfiles dist/todo-app/browser/* ./docs -f"
   },
   "private": true,
   "dependencies": {
@@ -20,6 +23,8 @@
     "@angular/router": "^17.0.0",
     "@ngrx/store": "^17.0.1",
     "@ngrx/store-devtools": "^17.0.1",
+    "copyfiles": "^2.4.1",
+    "del-cli": "^5.1.0",
     "rxjs": "~7.8.0",
     "todomvc-app-css": "^2.4.3",
     "tslib": "^2.3.0",
